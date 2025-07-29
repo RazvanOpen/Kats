@@ -1,0 +1,131 @@
+@charset "UTF-8";
+/*
+ Theme Name:  Fleurs d'orangers et chats errants - Oscars Short
+ Theme URI: https://www.koukaki.local
+ Author: Studio Koukaki
+ Author URI: https://www.koukaki.local
+ Template: foce
+ Description: Thème enfant à l'ocasion de la nomination aux Oscars Shorts
+ Version: 0.1
+ */
+.banner {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner .video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+.banner .video-container video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.banner .banner-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+.banner .banner-content h1.floating-title {
+  font-size: 3rem;
+  color: white;
+  animation: floatTitle 4s ease-in-out infinite;
+}
+
+@keyframes floatTitle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 2s ease-out forwards;
+}
+
+.fade-in {
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.section-title {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.section-title.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Style Oscars*/
+.oscars {
+  background-color: #fff8f0;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.oscars img {
+  width: 100px;
+  margin-bottom: 1rem;
+}
+.oscars p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+
+/*Hibiscus*/
+.story {
+  position: relative;
+}
+
+.hibiscus-rotate {
+  animation: rotateFlower 12s linear infinite;
+  position: absolute;
+  width: 188px;
+  height: 188px;
+  top: 32px;
+  left: 1132px;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.hibiscus-rotate2 {
+  animation: rotateFlower 12s linear infinite;
+  position: absolute;
+  width: 388px;
+  height: 388px;
+  top: auto;
+  left: auto;
+  z-index: 5;
+  pointer-events: none;
+}
+
+@keyframes rotateFlower {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=scss.css.map */
