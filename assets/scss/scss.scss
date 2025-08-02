@@ -1,0 +1,237 @@
+/*
+ Theme Name:  Fleurs d'orangers et chats errants - Oscars Short
+ Theme URI: https://www.koukaki.local
+ Author: Studio Koukaki
+ Author URI: https://www.koukaki.local
+ Template: foce
+ Description: Thème enfant à l'ocasion de la nomination aux Oscars Shorts
+ Version: 0.1
+ */
+
+//Header hero Video fallback paralaxe
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+
+  .hero-fallback {
+    display: none;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+    width: 100%;
+    padding: 0 1rem;
+
+    h1.floating-title {
+      font-size: 2.5rem;
+      animation: floatTitle 3s ease-in-out infinite alternate;
+      opacity: 0;
+      animation: fadeIn 5s ease forwards;
+    }
+  }
+}
+
+// Float animation
+@keyframes floatTitle {
+  0% {
+    transform: translate(-50%, -52%);
+  }
+  100% {
+    transform: translate(-50%, -48%);
+  }
+}
+
+// Fade-in for title
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// RESPONSIVE: Mobile
+@media (max-width: 768px) {
+  .hero-video {
+    display: none !important;
+  }
+
+  .floating-title {
+    display: none !important;
+  }
+
+  .hero-fallback {
+    display: block;
+  }
+
+  .banner-content {
+    display: none;
+  }
+}
+
+
+// Fin Header Hero
+
+//caracteres SWIFTJS
+.characters-swiper-container {
+  padding: 4rem 0;
+  text-align: center;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+  }
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.swiper-slide {
+  background: #fff;
+  //border-radius: 1rem;
+  width: 200px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+
+  figure {
+    margin: 0;
+    text-align: center;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+    }
+
+    figcaption {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+    }
+  }
+}
+
+
+// Fin caracter SWIFTJS
+
+ .section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 2s ease-out forwards;
+}
+
+.fade-in {
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-title {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.section-title.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Style Oscars*/
+.oscars {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff8f0;
+  padding: 4rem 2rem;
+  text-align: center;
+
+  img {
+    width: 100px;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+  }
+}
+
+/*Hibiscus*/
+.story {
+  position: relative;
+}
+
+.hibiscus-rotate {
+  animation: rotateFlower 12s linear infinite;
+  position: absolute;
+  width: 188px;
+  height: 188px;
+  top: 32px;
+  left: 1132px;
+  transform: translate(-50%, -50%); // recentre depuis le milieu
+  z-index: 5;
+  // background-color: #fff8f0;
+  pointer-events: none;
+}
+
+
+.hibiscus-rotate2 {
+  animation: rotateFlower 12s linear infinite;
+  position: absolute;
+  width: 388px;
+  height: 388px;
+  top: auto;
+  left: auto;
+  //transform: translate(-50%, -50%); // recentre depuis le milieu
+  z-index: 5;
+  pointer-events: none;
+}
+
+@keyframes rotateFlower {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
