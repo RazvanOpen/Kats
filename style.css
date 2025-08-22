@@ -14,27 +14,27 @@
   height: auto;
   overflow: hidden;
 }
-.banner .video-container {
+.video-container {
   position: relative;
   width: 100%;
   height: 100%;
-  z-index: 2;
+  /*z-index: 2;*/
 }
-.banner .hero-video {
+.hero-video {
   width: 100%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
 }
-.banner .hero-fallback {
+.hero-fallback {
   display: none;
   width: 100%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.banner .banner-content {
+.banner-content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -45,7 +45,7 @@
   width: 100%;
   padding: 0 1rem;
 }
-.banner .banner-content h1.floating-title {
+.banner-content h1 .floating-title {
   font-size: 2.5rem;
   animation: floatTitle 3s ease-in-out infinite alternate;
   opacity: 0;
